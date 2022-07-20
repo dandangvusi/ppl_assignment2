@@ -1,0 +1,12 @@
+
+        Function: add2int
+            Parameter: a, b
+            Body:
+                Return a + b;
+            EndBody.
+        Function: main
+            Body:
+                Var: x = 1, y = 2, z;
+                z = add2int(x, y);
+            EndBody.
+        

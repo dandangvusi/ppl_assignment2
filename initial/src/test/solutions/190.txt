@@ -1,0 +1,1 @@
+Function,18,:,57,double,60,Parameter,20,:,57,n,60,Body,7,:,57,Return,21,n,60,*,28,2,1,;,56,EndBody,13,.,59,Function,18,:,57,main,60,Body,7,:,57,Var,23,:,57,x,60,=,49,5,1,;,56,print,60,(,52,double,60,(,52,x,60,),53,),53,;,56,EndBody,13,.,59,<EOF>

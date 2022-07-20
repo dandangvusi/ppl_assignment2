@@ -1,0 +1,9 @@
+
+            Var: x = True, y = 1;
+            Function: main
+                Body:
+                    Var: z;
+                    z = !x;
+                    print(z);
+                EndBody.
+            

@@ -1,0 +1,13 @@
+
+        Function: main
+                Body:
+                    Var: a = True, b = False, c = 2.4e-1, d = 1.0, e = 5, f = 3, g = "Hello", h = "Dan", arr1[2] = {1, 2}, arr2[2] = {3, 4};
+                    If a Then
+                        print("If expression");
+                    ElseIf b Then
+                        print("ElseIf expression");
+                    Else
+                        print("Else expression");
+                    EndIf.
+                EndBody.
+        

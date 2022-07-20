@@ -1,1 +1,1 @@
-Program([VarDecl(Id(x))])
+successful

@@ -1,0 +1,9 @@
+
+        Function: main
+            Body:
+                Var: a[5] = {1,2,3,4,5}, b = 2;
+                a[0] = getBigger(a[1], a[2]);
+                True = 5 + 2*3;
+                print(b);
+            EndBody.
+        

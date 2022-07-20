@@ -1,0 +1,11 @@
+
+        Function: main
+                Body:
+                    Var: x = 5;
+                    If x > 0 Then
+                        print("x is greater than 0");
+                    Else
+                        print("x is less than 0");
+                    EndIf.
+                EndBody.
+        

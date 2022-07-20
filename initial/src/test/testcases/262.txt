@@ -1,0 +1,17 @@
+
+        Function: multipleArray
+            Parameter: a[5], b
+            Body:
+                Var: i = 0, l = 5;
+                Do
+                    a[i] = a[i]*b;
+                    i = i + 1;
+                While i < l
+                EndDo.
+            EndBody.
+        Function: main
+            Body:
+                Var: a[5] = {1,2,3,4,5}, b = 2;
+                multipleArray(a,b);
+            EndBody.
+        

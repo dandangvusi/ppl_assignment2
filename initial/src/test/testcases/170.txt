@@ -1,0 +1,9 @@
+
+            Function: main
+                Body:
+                    printLn();
+                    print("Hello BKIT");
+                    printStrLn("Hello Dan");
+                    read();
+                EndBody.
+            

@@ -1,0 +1,6 @@
+
+            **
+            Global var declare
+            **
+            Var: x = 0;
+            

@@ -1,0 +1,1 @@
+Function,18,:,57,main,60,Body,7,:,57,Var,23,:,57,x,60,=,49,5,1,;,56,If,19,x,60,>,38,0,1,Then,22,print,60,(,52,x is greater than 0,6,),53,;,56,ElseIf,12,x,60,==,35,0,1,Then,22,print,60,(,52,x is equal to 0,6,),53,;,56,Else,11,print,60,(,52,x is less than 0,6,),53,;,56,EndIf,14,.,59,EndBody,13,.,59,<EOF>

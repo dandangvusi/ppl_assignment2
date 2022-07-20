@@ -1,0 +1,10 @@
+
+        Var: x = 5, y = 2.0, z = "x*y = ";
+        Function: main
+            Body:
+                Var: a;
+                a = x * y;
+                print(z);
+                print(a);
+            EndBody.
+        

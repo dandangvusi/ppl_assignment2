@@ -1,0 +1,1 @@
+Function,18,:,57,main,60,Body,7,:,57,printLn,60,(,52,),53,;,56,print,60,(,52,Hello BKIT,6,),53,;,56,printStrLn,60,(,52,Hello Dan,6,),53,;,56,read,60,(,52,),53,;,56,EndBody,13,.,59,<EOF>

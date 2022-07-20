@@ -26,7 +26,7 @@ options {
 
 // ================================================================== PARSER ==================================================================
 
-program: glob_var_decl_part? func_decl_part EOF;
+program: glob_var_decl_part func_decl_part EOF;
 
 // GLOBAL VARIABLE DECLARATION PART
 glob_var_decl_part: var_decl_list?;
@@ -155,6 +155,12 @@ dimensions: dimension dimensions | dimension;
 
 dimension: LS (DEC_INT_LIT | HEX_INT_LIT | OCT_INT_LIT) RS;
 
+array_lit: LC array_element_list RC;
+
+array_element_list: array_element COMMA array_element_list | array_element;
+
+array_element: DEC_INT_LIT | HEX_INT_LIT | OCT_INT_LIT | FLT_LIT | STR_LIT | array_lit;
+
 // ================================================================== LEXER ==================================================================
 
 // FRAGMENTS
@@ -174,25 +180,6 @@ fragment FLT_EXP_PART: ('e' | 'E') ('+' | '-')? (
 fragment ESCAPE_CHAR: '\\' [bfrnt'\\];
 fragment DOUBLE_QUOTE_CHAR: '\'"';
 
-// LITERALS (CHECK ARRAY LITERAL)
-array_lit:
-	LC (
-		DEC_INT_LIT
-		| HEX_INT_LIT
-		| OCT_INT_LIT
-		| FLT_LIT
-		| STR_LIT
-		| array_lit
-	) (
-		',' (
-			DEC_INT_LIT
-			| HEX_INT_LIT
-			| OCT_INT_LIT
-			| FLT_LIT
-			| STR_LIT
-			| array_lit
-		)
-	)* RC;
 DEC_INT_LIT: ('0' | DEGIT_NO_ZERO DEGIT*);
 HEX_INT_LIT:
 	HEX_PREFIX (DEGIT_NO_ZERO | HEX_CHAR) (DEGIT | HEX_CHAR)*;

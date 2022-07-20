@@ -1,0 +1,10 @@
+
+        Function: foo
+            Body:
+                Return;
+            EndBody.
+        Function: main
+            Body:
+                foo();
+            EndBody.
+        

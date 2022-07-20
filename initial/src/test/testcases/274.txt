@@ -1,0 +1,8 @@
+
+        Function: main
+            Body:
+                Var: a = True, b = False, c = 2.4e-1, d = 1.0, e = 5, f = 3, g = "Hello", h = "Dan", arr1[2] = {1, 2}, arr2[2] = {3, 4};  
+                res = string2int(read());
+                print(res);
+            EndBody.
+        

@@ -1,0 +1,9 @@
+
+        Var: a, b = 1;
+        Return a;
+        Function: main
+            Body:
+                a = b + 2;
+                print(a);
+            EndBody.
+        

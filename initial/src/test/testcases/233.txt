@@ -1,0 +1,12 @@
+
+        Function: isGreaterZero
+        Parameter: a
+            Body:
+                Return a > 0;
+            EndBody.
+        Function: main
+            Body:
+                Var: x = 5;
+                print(isGreaterZero(x));
+            EndBody.
+        

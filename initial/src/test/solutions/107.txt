@@ -1,1 +1,1 @@
-Error Token "
+Body,7,Break,8,Continue,9,Do,10,Else,11,ElseIf,12,EndBody,13,EndIf,14,EndFor,15,EndWhile,16,<EOF>

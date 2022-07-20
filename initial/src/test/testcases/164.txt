@@ -1,0 +1,9 @@
+
+            Function: main
+                Body:
+                    Var: x = 5;
+                    For (i = 0, i < x, 1) Do
+                        writeln(i);
+                    EndFor.
+                EndBody.
+            

@@ -1,0 +1,12 @@
+
+        Function: main
+            Body:
+                Var: x = 5;
+                For (i = 0, i < x) Do
+                    writeln(i);
+                    If i % 2 == 0 Then
+                        Continue;
+                    EndIf.
+                EndFor.
+            EndBody.
+        

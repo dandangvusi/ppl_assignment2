@@ -1,0 +1,12 @@
+
+        Function: double
+            Parameter: n
+            Body:
+                Return n * 2;
+            EndBody.
+        Function: main
+            Body:
+                Var: x = 5;
+                print(double(x));
+            EndBody.
+        

@@ -1,0 +1,16 @@
+
+            Function: isGreaterThanZero
+            Parameter: a
+                Body:
+                    If a > 0 Then
+                        Return True;
+                    Else
+                        Return False;
+                    EndIf.
+                EndBody.
+            Function: main
+                Body:
+                    Var: x = 1;
+                    print(isGreaterThanZero(x));
+                EndBody.
+            

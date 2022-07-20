@@ -1,0 +1,10 @@
+
+        Var: x = 1.5e2, y = 3.6;
+        Function: main
+            Body:
+                Var: a[5] = {1,2,3,4,5}, b = 2;
+                a[0] = 0;
+                b = 5;
+                print(b);
+            EndBody.
+        
