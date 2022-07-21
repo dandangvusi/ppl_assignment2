@@ -56,9 +56,9 @@ param_list: param COMMA param_list | param;
 
 param: ID | ID dimensions;
 
-func_body: BODY COLON stmt_list? ENDBODY DOT;
+func_body: BODY COLON stmt_list ENDBODY DOT;
 
-stmt_list: var_decl_stmt_list? other_stmt_list;
+stmt_list: var_decl_stmt_list? other_stmt_list?;
 
 var_decl_stmt_list:
 	var_decl_stmt var_decl_stmt_list
@@ -82,18 +82,18 @@ var_decl_stmt: VAR COLON var_list SEMI;
 assign_stmt: (ID | index_exp) ASSIGN exp SEMI;
 
 if_stmt:
-	IF exp THEN stmt_list? else_if_list? (ELSE stmt_list?)? ENDIF DOT;
+	IF exp THEN stmt_list else_if_list? (ELSE stmt_list)? ENDIF DOT;
 
 else_if_list: else_if else_if_list | else_if;
 
-else_if: ELSEIF exp THEN stmt_list?;
+else_if: ELSEIF exp THEN stmt_list;
 
 for_stmt:
-	FOR LB ID ASSIGN exp COMMA exp COMMA exp RB DO stmt_list? ENDFOR DOT;
+	FOR LB ID ASSIGN exp COMMA exp COMMA exp RB DO stmt_list ENDFOR DOT;
 
-while_stmt: WHILE exp DO stmt_list? ENDWHILE DOT;
+while_stmt: WHILE exp DO stmt_list ENDWHILE DOT;
 
-do_while_stmt: DO stmt_list? WHILE exp ENDDO DOT;
+do_while_stmt: DO stmt_list WHILE exp ENDDO DOT;
 
 break_stmt: BREAK SEMI;
 
@@ -159,7 +159,7 @@ array_lit: LC array_element_list RC;
 
 array_element_list: array_element COMMA array_element_list | array_element;
 
-array_element: DEC_INT_LIT | HEX_INT_LIT | OCT_INT_LIT | FLT_LIT | STR_LIT | array_lit;
+array_element: literal;
 
 // ================================================================== LEXER ==================================================================
 
