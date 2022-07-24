@@ -5,19 +5,28 @@ from AST import *
 class ASTGeneration(BKITVisitor):
     # program: glob_var_decl_part func_decl_part EOF;
     def visitProgram(self,ctx:BKITParser.ProgramContext):
-        return Program([VarDecl(Id(ctx.ID().getText()),[],None)])
+        var_decls = self.visit(ctx.glob_var_decl_part())
+        func_decls = self.visit(ctx.func_decl_part())
+        decl = var_decls + func_decls
+        return Program(decl)
 
     # glob_var_decl_part: var_decl_list?;
     def visitGlob_var_decl_part(self, ctx:BKITParser.Glob_var_decl_partContext):
-        pass
+        if ctx.var_decl_list():
+            return self.visit(ctx.var_decl_list())
+        else:
+            return []
 
     # var_decl_list: var_decl var_decl_list | var_decl;
     def visitVar_decl_list(self, ctx:BKITParser.Var_decl_listContext):
-        pass
+        if ctx.getChildCount() == 1:
+            return self.visit(ctx.var_decl())
+        else:
+            return self.visit(ctx.var_decl()) + self.visit(ctx.var_decl_list())
 
     # var_decl: VAR COLON var_list SEMI;
     def visitVar_decl(self, ctx:BKITParser.Var_declContext):
-        pass
+        return self.visit(ctx.var_list())
 
     # var_list: var COMMA var_list | var;
     def visitVar_list(self, ctx:BKITParser.Var_listContext):
@@ -56,11 +65,17 @@ class ASTGeneration(BKITVisitor):
 
     # func_decl_part: func_decl_list?;
     def visitFunc_decl_part(self, ctx:BKITParser.Func_decl_partContext):
-        pass
+        if ctx.func_decl_list():
+            return self.visit(ctx.func_decl_list())
+        else:
+            return []
 
     # func_decl_list: func_decl func_decl_list | func_decl;
     def visitFunc_decl_list(self, ctx:BKITParser.Func_decl_listContext):
-        pass
+        if ctx.getChildCount() == 1:
+            return [self.visit(ctx.func_decl())]
+        else:
+            return [self.visit(ctx.func_decl())] + self.visit(ctx.func_decl_list())
 
     # func_decl: FUNCTION COLON ID func_param? func_body;
     def visitFunc_decl(self, ctx:BKITParser.Func_declContext):
@@ -68,13 +83,15 @@ class ASTGeneration(BKITVisitor):
         func_var_decls, func_stmts = self.visit(ctx.func_body())
         body = (func_var_decls, func_stmts)
         if ctx.func_param():
-            pass
+            param = self.visit(ctx.func_param())
+            return FuncDecl(name, param, body)
         else:
-            pass
+            param = []
+            return FuncDecl(name, param, body)
 
     # func_param: PARAMETER COLON param_list;
     def visitFunc_param(self, ctx:BKITParser.Func_paramContext):
-        pass
+        return self.visit(ctx.param_list())
 
     # param_list: param COMMA param_list | param;
     def visitParam_list(self, ctx:BKITParser.Param_listContext):
