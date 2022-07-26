@@ -1,0 +1,10 @@
+
+        Function: main
+            Body:
+                Var: x = 5;
+                For (i = 0, i =/= 10, 1*2) Do
+                    Var: y = 2;
+                    x = y + i;
+                EndFor.
+            EndBody.
+        

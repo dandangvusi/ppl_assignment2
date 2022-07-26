@@ -1,0 +1,7 @@
+
+        Function: main
+            Body:
+                Var: x = 4.5, y = 5.2e-1, z = 6.9, t;
+                t = x *. y +. -.z *. 5e-10;
+            EndBody.
+        
