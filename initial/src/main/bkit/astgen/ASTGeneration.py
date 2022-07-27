@@ -423,7 +423,7 @@ class ASTGeneration(BKITVisitor):
 
     # func_call: ID LB exp_list? RB;
     def visitFunc_call(self, ctx:BKITParser.Func_callContext):
-        method = ctx.ID().getText()
+        method = Id(ctx.ID().getText())
         if ctx.exp_list():
             param = self.visit(ctx.exp_list())
             return CallExpr(method, param)

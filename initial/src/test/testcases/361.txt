@@ -1,0 +1,7 @@
+
+        Function: main
+            Body:
+                Var: arr[3] = {1,2,3}, b = 1, c;
+                return_arr()[b] = 3 + arr[0 + abs(-b)];
+            EndBody.
+        

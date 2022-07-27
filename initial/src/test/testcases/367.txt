@@ -1,0 +1,13 @@
+
+        Function: main
+            Body:
+                Var: x = 5;
+                While x < 100 * 2 Do
+                    Var: y = 5;
+                    x = x + y;
+                    If x >= 50 Then
+                        Continue;
+                    EndIf.
+                EndWhile.
+            EndBody.
+        

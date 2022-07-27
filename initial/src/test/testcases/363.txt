@@ -1,0 +1,11 @@
+
+        Var: x = 10;
+        Var: y = 20;
+        Function: main
+            Body:
+                Var: a;
+                Var: b;
+                a = x + y;
+                b = 2 * y;
+            EndBody.
+        
