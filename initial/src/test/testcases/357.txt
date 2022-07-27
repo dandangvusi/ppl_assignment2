@@ -1,0 +1,10 @@
+
+        Function: main
+            Body:
+                Var: x = "Hello", y = "PPL";
+                printLn();
+                print(x);
+                printLn();
+                print(y);
+            EndBody.
+        

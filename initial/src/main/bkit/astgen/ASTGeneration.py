@@ -148,7 +148,7 @@ class ASTGeneration(BKITVisitor):
         if ctx.getChildCount() == 1:
             return [self.visit(ctx.other_stmt())]
         else:
-            return [self.visit(ctx.other_stmt())] + [self.visit(ctx.other_stmt_list())]
+            return [self.visit(ctx.other_stmt())] + self.visit(ctx.other_stmt_list())
 
     # other_stmt: assign_stmt | if_stmt | for_stmt | while_stmt | do_while_stmt | break_stmt | continue_stmt | call_stmt | return_stmt;
     def visitOther_stmt(self, ctx:BKITParser.Other_stmtContext):

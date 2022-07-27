@@ -1,0 +1,11 @@
+
+        Function: main
+            Body:
+                Var: x = 5;
+                Do
+                    Var: y = 5;
+                    x = x + y;
+                While x < 100 - 5 * 2
+                EndDo.
+            EndBody.
+        
