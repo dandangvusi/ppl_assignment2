@@ -1,0 +1,1 @@
+Program([FuncDecl(Id(main)[],([VarDecl(Id(x),StringLiteral(This is a string containing tab \t)),VarDecl(Id(y),StringLiteral(He asked me: '"Where is John?'")),VarDecl(Id(z),StringLiteral(ab'"c\n def)),VarDecl(Id(t),StringLiteral(a'bc\'))][]))])

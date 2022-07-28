@@ -1,0 +1,10 @@
+
+        Var: x = 5;
+        Var: x = 5;
+        Var: x = 5;
+        Function: main
+            Body:
+                Var: x = 4, y = 5, z = 6, t;
+                t = x - y + z - 5;
+            EndBody.
+        

@@ -1,0 +1,1 @@
+Program([FuncDecl(Id(isGreaterZero)[VarDecl(Id(n))],([][Return(BinaryOp(>,Id(n),IntLiteral(0)))])),FuncDecl(Id(main)[],([VarDecl(Id(x),IntLiteral(5))][CallStmt(Id(print),[CallExpr(Id(isGreaterZero),[BinaryOp(-,BinaryOp(*,IntLiteral(4),IntLiteral(4)),IntLiteral(3))])])]))])

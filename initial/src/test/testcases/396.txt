@@ -1,0 +1,6 @@
+
+        Function: main
+            Body:
+                Var: x = "This is a string containing tab \t", y = "He asked me: '"Where is John?'"", z = "ab'"c\n def", t = "a'bc\'";
+            EndBody.
+        

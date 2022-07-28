@@ -1,0 +1,7 @@
+
+        Function: main
+            Body:
+                Var: x = 0xFF, y = 0XA, z = 0o567, t = 0O77;
+                t = x - y + z - 5;
+            EndBody.
+        

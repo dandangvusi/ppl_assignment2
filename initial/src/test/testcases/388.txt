@@ -1,0 +1,19 @@
+
+        Function: main
+            Body:
+                Var: x = 5;
+                If x % 2 == 0 Then
+                    Var: y = 2;
+                    x = x + 1;
+                ElseIf x > 0 Then
+                    Var: y = 2;
+                    x = x + 2;
+                ElseIf x > 100 Then
+                    Var: y = 2;
+                    x = x + 3;
+                Else
+                    Var: y = 2;
+                    x = x + 4;
+                EndIf.
+            EndBody.
+        
